@@ -1,0 +1,31 @@
+body {
+    text-align: center;
+    margin: 0px;
+    background-color: rgb(15, 15, 15);
+    color: rgb(199, 199, 199);
+}
+
+input {
+    margin-top: 10px;
+    background: black;
+    border: none;
+    color: rgb(199, 199, 199);
+}
+
+textarea {
+    display: block;
+    width: 700px;
+    height: 350px;
+    background: black;
+    border: none;
+    color: rgb(199, 199, 199);
+    margin: auto;
+    margin-top: 40px;
+}
+
+button {
+    margin-top: 10px;
+    background: black;
+    border: none;
+    color: rgb(199, 199, 199);
+}

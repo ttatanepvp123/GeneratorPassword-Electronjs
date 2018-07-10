@@ -1,1 +1,0 @@
-# GeneratorPassword-Electronjs
