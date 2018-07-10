@@ -6,12 +6,14 @@ function generate(){
     var ABCDE = document.getElementById("ABCDE");
     var abcde = document.getElementById("abcde");
     var specialCharacter = document.getElementById("special-character");
-    var number = document.getElementById("number");
+    var numberSize = document.getElementById("number");
+    var numberSize = document.getElementById("number-size");
     var output = document.getElementById("output");
     output.value = "";
     if(ABCDE.checked == true
     || abcde.checked == true
-    || specialCharacter.checked == true) {
+    || specialCharacter.checked == true
+    || number.checked == true) {
         var CharacterPossible = ":";
         if (ABCDE.checked == true) {
             CharacterPossible += "A:B:C:D:E:F:G:H:I:J:K:L:M:N:O:P:Q:R:S:T:U:V:W:X:Y:Z:";
@@ -24,6 +26,10 @@ function generate(){
         if (specialCharacter.checked == true) {
             CharacterPossible += "%:/:':(:-:^:~:#:{:<:[:|:`:\\:ç:@:}:]:;:,:?:.:/:";
         }
+
+        if (number.checked == true) {
+            CharacterPossible += "0:1:2:3:4:5:6:7:8:9:";
+        }
         
         /* Brainfuck Generator O_O */
         /* 
@@ -31,7 +37,7 @@ function generate(){
             CharacterPossible += ">:<​:+:-:.:,";
         }*/
 
-        for (let index = 0; index < parseInt(number.value); index++) {
+        for (let index = 0; index < parseInt(numberSize.value); index++) {
             output.value += CharacterPossible.split(':')[getRandomInt(CharacterPossible.split(':').length)];
         }
 
